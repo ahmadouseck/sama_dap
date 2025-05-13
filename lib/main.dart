@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sama_dap/home.dart';
 
 void main() {
+
   runApp(const MyApp());
 }
 
@@ -11,46 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Sama_DAP',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'DAP'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-      backgroundColor: Colors.blueAccent,
-      elevation: 4,
-      title: Text(widget.title),
-      ),
-      body: const Center(
-
-        child:    Card(
-            margin: EdgeInsets.all(30),
-            elevation: 15,
-            color: Colors.deepPurple,
-            child: Center(
-                child: Text("Hello World")
-            )
-        ),
-      ),
-
+      home: const SplashScreen(),
     );
   }
 }
